@@ -1,0 +1,32 @@
+
+package qe5.pkg7;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author iyim2
+ */
+public class Qe57 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+         
+        Scanner in = new Scanner(System.in);
+        System.out.println("ادخل ثلاثة ارقام: ");
+        int a = in.nextInt();
+        int b = in.nextInt();
+        int c = in.nextInt();
+        if (a >= b && b >= c) {
+            System.out.println("in order");
+        } else if (a <= b && b <= c) {
+            System.out.println("in order");
+        } else {
+            System.out.println("not in order");
+        }
+    }
+    }
+    
+
