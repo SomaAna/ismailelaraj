@@ -1,0 +1,45 @@
+package mthalath;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author admin
+ */
+public class Mthalath {
+
+     public static void main(String[] args) {
+        Scanner im = new Scanner(System.in);
+        //وضع ااحداثات للنقطة  لصنع الزاوية الاولى
+        System.out.println("Enter the first_P_Corner (x,y)");
+        int x1 = im.nextInt();
+        int y1 = im.nextInt();
+        //وضع ااحداثات للنقطة  لصنع الزاوية الثانية
+        System.out.println("Enter the sacound_P_Corner (x,y)");
+        int x2 = im.nextInt();
+        int y2 = im.nextInt();
+        //وضع ااحداثات للنقطة  لصنع الزاوية الثالثة
+        System.out.println("Enter the third_P_Corner (x,y)");
+        int x3 = im.nextInt();
+        int y3 = im.nextInt();
+        //نحسب الاطوال الثلاثة
+        double tool_1 = Math.sqrt(Math.pow((x1 - x2), 2) + Math.pow((y1 - y2), 2));
+        double tool_2 = Math.sqrt(Math.pow((x1 - x3), 2) + Math.pow((y1 - y3), 2));
+
+        double tool_3 = Math.sqrt(Math.pow((x2 - x3), 2) + Math.pow((y2 - y3), 2));
+
+        if (Math.round(tool_1 * tool_1) == Math.round((tool_3 * tool_3) + (tool_2 * tool_2))
+                || Math.round(tool_2 * tool_2) == Math.round((tool_3 * tool_3) + (tool_1 * tool_1))
+                || Math.round(tool_3 * tool_3) == Math.round((tool_1 * tool_1) + (tool_2 * tool_2))) {
+            System.out.println("قائم الزاوية");
+        } else if (Math.round(tool_1 * tool_1) > Math.round((tool_3 * tool_3) + (tool_2 * tool_2))
+                || Math.round(tool_2 * tool_2) > Math.round((tool_3 * tool_3) + (tool_1 * tool_1))
+                || Math.round(tool_3 * tool_3) > Math.round((tool_1 * tool_1) + (tool_2 * tool_2))) {
+            System.out.println("منفرج");
+
+        } else {
+            System.out.println("حاد الزوايا");
+        }
+    }
+
+}
