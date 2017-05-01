@@ -1,0 +1,33 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package soal.mafen;
+
+import java.util.Scanner;
+
+public class SoalMafen {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("write your coloar");
+        String coloor = in.next();
+        switch (coloor) {
+
+            case "red": case "Red" :
+            case "green": case "Green":
+            case "blue":case "Blue":
+                System.out.println("this is a main color ");
+                break;
+            default:
+                System.out.println("not main color");
+
+        }
+
+    }
+
+}
