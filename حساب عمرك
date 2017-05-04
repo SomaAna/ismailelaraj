@@ -1,3 +1,8 @@
+package javaapplication1;
+import java.util.Scanner;
+
+
+
 public class JavaApplication1 {
 
   
@@ -5,6 +10,8 @@ public class JavaApplication1 {
     Scanner x=new Scanner (System.in);
     System.out.println("please enter this year");
     int s= x.nextInt();    
-    System.out.println("Please enter your year birthday :");
+    System.out.println("Please enter your birthday :");
     int y= x.nextInt();
     System.out.println("your age:"+(s-y));
+    }
+}
