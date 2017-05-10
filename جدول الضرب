@@ -1,0 +1,38 @@
+/*
+ضع اول رقم تريد بداية الجدول منه . ثم الرقم الذي تريد الامتهاء منه ثم الرقم الجدول الضرب الذي تريده
+ */
+package v1;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author admin
+ */
+public class V1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+ 
+
+
+
+Scanner n = new Scanner(System.in);
+System.out.println("Enter number from");
+int x = n.nextInt();
+System.out.println("To");
+int y = n.nextInt();
+System.out.println("Jadwal");
+int j = n.nextInt();
+for(x=x;x<=y;x++){
+int sum = x*j;
+System.out.println(x+"*"+j+"="+sum);
+}
+
+
+}
+}
+   
+
