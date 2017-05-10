@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+
+public class Array {
+
+    public static void main(String[] args) {
+
+        String amaleyat;
+        int number = 0;
+        Scanner input = new Scanner(System.in,"Windows-1256");
+
+        for (int y = 0; y < 9999; y++) {
+            System.out.println(" ادخل الرقم : ");
+            int x = input.nextInt();
+            System.out.println(" ادخل احد العلامات  '+' '×' '/' '-'");
+            amaleyat = input.next();
+            System.out.println(" ادخل الرقم : ");
+            int v = input.nextInt();
+            if (amaleyat.equals("+")) {
+
+                number = x + v;
+                System.out.println("الناتج :"+number);
+            } else if (amaleyat.equals("*")) {
+
+                number = x * v;
+                System.out.println("الناتج : "+number);
+            }
+            else if (amaleyat.equals("/")) {
+
+                number = x / v;
+                System.out.println("الناتج :"+number);
+            }
+            else if (amaleyat.equals("-")) {
+
+                number = x - v;
+                System.out.println("الناتج :"+number);
+            }
+            System.out.println("هل تريد الخروج نعم ام لا :");
+            String m = input.next();
+            if(m.equals("نعم")){
+                break;
+            }
+            else{
+                continue;
+            }
+
+        }
+
+    }
+}
