@@ -1,0 +1,11 @@
+package array;
+
+import java.util.Scanner;
+
+
+public class Arraylab {
+    public static void main(String[] args) {
+        int x [] = new int[15];
+        for (int i = 0; i <x.length; i++) {
+       x[i] = (char)(65+i);    
+       //طباعة الأحرف الأبجدية من حتى حرف  o
