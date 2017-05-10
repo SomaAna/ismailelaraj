@@ -1,0 +1,32 @@
+package array;
+
+import java.util.Scanner;
+import static org.omg.CORBA.BAD_POLICY.value;
+
+
+public class Array {
+
+   
+    public static void main(String[] args) {
+      
+        Scanner sc = new Scanner(System.in);
+        int max , min;
+        max = sc.nextInt();
+        min = max;
+        
+        if(max != -1){
+       while (sc.hasNextInt()) {
+           int value = sc.nextInt();
+           if(value == -1)
+               break;
+           if(max<value)
+       
+               max = value;
+           if(min>value)
+               min = value;
+    }
+    
+}
+        System.out.println("max = " + value );
+    }
+}
