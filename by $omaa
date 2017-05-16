@@ -1,0 +1,70 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package investmentspackage;
+
+/**
+ *
+ * @author admin
+ */
+public class Investments {
+
+    private double balance;
+    private double rate;
+    private double year;
+
+    public Investments(double aBalance, double aRate) {
+        this.balance = aBalance;
+        rate = aRate;
+        year = 0;
+
+    }
+
+    public void waitForBalance(double targetBalance) {
+
+        while (balance < targetBalance) {
+            year++;
+            double interst = balance * rate / 100;
+            balance = balance + interst;
+        }
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public int getyear() {
+        return (int) year;
+    }
+
+}
+________________________________
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package investmentspackage;
+
+/**
+ *
+ * @author admin
+ */
+public class InvestmentRunner {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        final double INITIAL_BALANCE = 100;
+        final double RATE = 5;
+        Investments invest = new Investments(INITIAL_BALANCE, RATE);
+        invest.waitForBalance(2*INITIAL_BALANCE);
+        int years = invest.getyear();
+        System.out.println(years);
+
+    }
+
+}
