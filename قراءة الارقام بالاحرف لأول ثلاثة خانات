@@ -1,102 +1,221 @@
-public static void main(String[] args) {
-    Scanner x=new Scanner (System.in);
-     
+package labkraa;
 
-   System.out.println("Please enter the number (فقط لثلاثة خانات):");
-    int s= x.nextInt();
-    int a=s/100;
-    int c=s%10;
-    int b=(s%100)/10;
-     System.out.println(a);
-     System.out.println(b);
-     System.out.println(c);
-   
-   switch(a){
-   case 1:
-    System.out.print("مائة");
-    break;
-   case 2:
-    System.out.print("مئتان");
-    break;
-   case 3:
-    System.out.print("ثلاثمائة");
-    break;
-    case 4:
-    System.out.print("أربعمائة");
-    break;
-    case 5:
-    System.out.print("خمسمائة");
-    break;
-    case 6:
-    System.out.print("ستمائة");
-    break;
-    case 7:
-    System.out.print("سبعمائة");
-    break;
-    case 8:
-    System.out.print("ثمانمئة");
-    break;
-    case 9:
-    System.out.print("تسعمائة");
-    break;
-   }
-     switch(c){
-   case 1:
-    System.out.print(" إحدى"+" و ");
-    break;
-   case 2:
-    System.out.print("و إثنا"+" ");
-    break;
-   case 3:
-    System.out.print("وثلاث"+" ");
-    break;
-    case 4:
-    System.out.print("وأربع"+" ");
-    break;
-    case 5:
-    System.out.print("وخمس"+" ");
-    break;
-    case 6:
-    System.out.print("وست"+" ");
-    break;
-    case 7:
-    System.out.print("وسبع"+" ");
-    break;
-    case 8:
-    System.out.print("وثمان"+" ");
-    break;
-    case 9:
-    System.out.print("وتسع"+" ");
-    break;
-   }
-      switch(b){
-   case 1:
-    System.out.print(" عشر "+" ");
-    break;
-   case 2:
-    System.out.print(" و عشرون"+" ");
-    break;
-   case 3:
-    System.out.print("و ثلاثون"+" ");
-    break;
-    case 4:
-    System.out.print("و أربعون"+" ");
-    break;
-    case 5:
-    System.out.print("و خمسون"+" ");
-    break;
-    case 6:
-    System.out.print("و ستون"+" ");
-    break;
-    case 7:
-    System.out.print("و سبعون"+" ");
-    break;
-    case 8:
-    System.out.print("و ثمانون"+" ");
-    break;
-    case 9:
-    System.out.print("و تسعون"+" ");
-    break;
-   }
+import java.util.Scanner;
+
+public class Labkraa {
+
+    public static void main(String[] args) {
+        Scanner x = new Scanner(System.in); // جملة الإدخال
+
+        System.out.println("Please enter the number :"); // تعليمات للمستخدم
+        int number = x.nextInt(); // حفظ متغير المدخل
+        System.out.println("------------------------------------------------");
+//-------------------------------------
+        int الآحاد = number % 10;
+        int العشرات = (number % 100) / 10;
+        int مئات = (number % 1000) / 100;
+        int الآلاف = (number % 10000) / 1000;
+//-------------------------------------
+        if (الآلاف != 0) {
+           
+            switch (الآلاف) {
+                case 1:
+                    System.out.print("ألف");
+                    break;
+                case 2:
+                    System.out.print("ألفان");
+                    break;
+                case 3:
+                    System.out.print("ثلاث آلاق");
+                    break;
+                case 4:
+                    System.out.print("أربعة آلاف");
+                    break;
+                case 5:
+                    System.out.print("خمسة آلاف");
+                    break;
+                case 6:
+                    System.out.print("ستة آلاف");
+                    break;
+                case 7:
+                    System.out.print("سبعة آلاف");
+                    break;
+                case 8:
+                    System.out.print("ثمانية آلاف");
+                    break;
+                case 9:
+                    System.out.print("تسعة آلاف");
+                    break;
+            }
+        }
+        if (مئات != 0) {
+            if (number / 100 != 0) { //اذا كان آلف نضع و 
+                System.out.print(" و ");
+            }
+            switch (مئات) {
+                case 1:
+                    System.out.print("مائة ");
+                    break;
+                case 2:
+                    System.out.print("مئتان ");
+                    break;
+                case 3:
+                    System.out.print("ثلاثمائة ");
+                    break;
+                case 4:
+                    System.out.print("أربعمائة ");
+                    break;
+                case 5:
+                    System.out.print("خمسمائة ");
+                    break;
+                case 6:
+                    System.out.print("ستمائة ");
+                    break;
+                case 7:
+                    System.out.print("سبعمائة ");
+                    break;
+                case 8:
+                    System.out.print("ثمانمئة ");
+                    break;
+                case 9:
+                    System.out.print("تسعمائة ");
+                    break;
+            }
+        }
+        if (الآحاد != 0) {
+            if (العشرات != 0) {
+                if (number / 100 != 0) { //اذا كانت  مئات نضع و 
+                    System.out.print(" و ");
+                }
+                switch (الآحاد) {
+                    case 1:
+                        System.out.print("  إحدى ");
+                        break;
+                    case 2:
+                        System.out.print(" إثنا");
+                        break;
+                    case 3:
+                        System.out.print("ثلاثة ");
+                        break;
+                    case 4:
+                        System.out.print("أربعة ");
+                        break;
+                    case 5:
+                        System.out.print("خمسة ");
+                        break;
+                    case 6:
+                        System.out.print("ستة ");
+                        break;
+                    case 7:
+                        System.out.print("سبعة ");
+                        break;
+                    case 8:
+                        System.out.print("ثمانة ");
+                        break;
+                    case 9:
+                        System.out.print("تسعة ");
+                        break;
+                }
+            } else if (number / 10 != 0) {
+                switch (الآحاد) {
+                    case 1:
+                        System.out.print("و واحد");
+                        break;
+                    case 2:
+                        System.out.print("وإثنان");
+                        break;
+                    case 3:
+                        System.out.print("وثلاثة");
+                        break;
+                    case 4:
+                        System.out.print("وأربعة");
+                        break;
+                    case 5:
+                        System.out.print("وخمسة");
+                        break;
+                    case 6:
+                        System.out.print("وستة");
+                        break;
+                    case 7:
+                        System.out.print("وسبعة");
+                        break;
+                    case 8:
+                        System.out.print("وثمانية");
+                        break;
+                    case 9:
+                        System.out.print("وتسعة");
+                        break;
+                }
+            } else {
+                switch (الآحاد) {
+                    case 1:
+                        System.out.print("واحد");
+                        break;
+                    case 2:
+                        System.out.print("إثنان");
+                        break;
+                    case 3:
+                        System.out.print("ثلاثة");
+                        break;
+                    case 4:
+                        System.out.print("أربعة");
+                        break;
+                    case 5:
+                        System.out.print("خمسة");
+                        break;
+                    case 6:
+                        System.out.print("ستة");
+                        break;
+                    case 7:
+                        System.out.print("سبعة");
+                        break;
+                    case 8:
+                        System.out.print("ثمانية");
+                        break;
+                    case 9:
+                        System.out.print("تسعة");
+                        break;
+                }
+            }
+        }
+        if (العشرات != 0) {
+            if (number / 100 != 0 && العشرات != 1) {
+                System.out.print(" و ");
+            }
+            switch (العشرات) {
+                case 1:
+                    if (الآحاد != 0) {
+                        System.out.print(" عشر");
+                    } else {
+                        System.out.print("عشرة ");
+                    }
+                    break;
+                case 2:
+                    System.out.print("عشرون ");
+                    break;
+                case 3:
+                    System.out.print("ثلاثون ");
+                    break;
+                case 4:
+                    System.out.print("أربعون ");
+                    break;
+                case 5:
+                    System.out.print("خمسون ");
+                    break;
+                case 6:
+                    System.out.print("ستون ");
+                    break;
+                case 7:
+                    System.out.print("سبعون ");
+                    break;
+                case 8:
+                    System.out.print("ثمانون ");
+                    break;
+                case 9:
+                    System.out.print("تسعون ");
+                    break;
+            }
+        }
+        System.out.println("");
     }
 }
