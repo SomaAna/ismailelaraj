@@ -1,0 +1,66 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package statichah;
+
+/**
+ *
+ * @author CDRwan
+ */
+public class B {
+
+    public static int ADD(int a ,int b) {
+       return a +b  ;
+    }
+     public static int Sub(int a , int b) {
+       return a -b ;
+    }
+      public static int Mul(int a , int b) {
+       return a+b;
+    }
+       public static int Div(int a , int b) {
+      if (b == 0){return 0;}else{return a/b;}
+    }
+}
+
+________________________________________________________________________________________________
+public class main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("inter any world to exit");
+        System.out.println("inter (1) to  '+' , (2) to '-' , (3) to '*' , (4) to '/'");
+
+        while (input.hasNextInt()) {
+            switch (input.nextInt()) {
+
+                case 1:
+                    System.out.println("inter the a and b to add");
+                    System.out.print("the ruslt is  :"+B.ADD(input.nextInt(), input.nextInt()));
+                    System.out.println("");System.out.println(""); System.out.println("");
+                    ;
+                    break;
+                case 2:
+                   System.out.println("inter the a and b to add");
+                    System.out.print("the ruslt is  :"+B.Sub(input.nextInt(), input.nextInt()));
+                    System.out.println("");System.out.println(""); System.out.println("");
+                    ;
+                case 3:
+                   System.out.println("inter the a and b to add");
+                    System.out.print("the ruslt is  :"+B.Mul(input.nextInt(), input.nextInt()));
+                    System.out.println("");System.out.println(""); System.out.println("");
+                    ;
+                case 4:
+                   System.out.println("inter the a and b to add");
+                    System.out.print("the ruslt is  :"+B.Div(input.nextInt(), input.nextInt()));
+                    System.out.println("");System.out.println(""); System.out.println("");
+                    ;
+
+            }
+             System.out.println("inter (1) to  '+' , (2) to '-' , (3) to '*' , (4) to '/'");
+        }
+
+    }
+}
